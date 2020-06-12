@@ -19,9 +19,9 @@ export default class CancelDialog extends PureComponent<Props> {
     const buttons = (
       <div>
         <DefaultButton type="button" onClick={onBack}>
-          Go Back
+          Gå tilbage
         </DefaultButton>
-        <RedButton type="submit">Yes, Cancel</RedButton>
+        <RedButton type="submit">Ja, annuller</RedButton>
       </div>
     )
 

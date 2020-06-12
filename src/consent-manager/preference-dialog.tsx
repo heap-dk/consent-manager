@@ -102,9 +102,9 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
     const buttons = (
       <div>
         <DefaultButton type="button" onClick={onCancel}>
-          Cancel
+          Fortryd
         </DefaultButton>
-        <GreenButton type="submit">Save</GreenButton>
+        <GreenButton type="submit">Gem</GreenButton>
       </div>
     )
     return (
@@ -121,11 +121,11 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
           <Table>
             <thead>
               <Row>
-                <ColumnHeading scope="col">Allow</ColumnHeading>
-                <ColumnHeading scope="col">Category</ColumnHeading>
-                <ColumnHeading scope="col">Purpose</ColumnHeading>
+                <ColumnHeading scope="col">Tillad</ColumnHeading>
+                <ColumnHeading scope="col">Kategori</ColumnHeading>
+                <ColumnHeading scope="col">Formål</ColumnHeading>
                 <ColumnHeading scope="col" className={hideOnMobile}>
-                  Tools
+                  Værktøj
                 </ColumnHeading>
               </Row>
             </thead>
@@ -142,10 +142,10 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
                           value="true"
                           checked={functional === true}
                           onChange={this.handleChange}
-                          aria-label="Allow functional tracking"
+                          aria-label="Tillad funktionel tracking"
                           required
                         />{' '}
-                        Yes
+                        Ja
                       </label>
                       <label>
                         <input
@@ -154,20 +154,17 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
                           value="false"
                           checked={functional === false}
                           onChange={this.handleChange}
-                          aria-label="Disallow functional tracking"
+                          aria-label="Afvis funktionel tracking"
                           required
                         />{' '}
-                        No
+                        Nej
                       </label>
                     </InputCell>
-                    <RowHeading scope="row">Functional</RowHeading>
+                    <RowHeading scope="row">Funktionelle</RowHeading>
                     <td>
                       <p>
-                        To monitor the performance of our site and to enhance your browsing
-                        experience.
-                      </p>
-                      <p className={hideOnMobile}>
-                        For example, these tools enable you to communicate with us via live chat.
+                        Funktionelle cookies hjælper os med at monitorere vores hjemmeside.
+                        Funktionelle cookies gør det eksempelvis også muligt at chatte med os.
                       </p>
                     </td>
                     <td className={hideOnMobile}>
@@ -184,10 +181,10 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
                           value="true"
                           checked={marketingAndAnalytics === true}
                           onChange={this.handleChange}
-                          aria-label="Allow marketing and analytics tracking"
+                          aria-label="Tillad marketing og statistisk tracking"
                           required
                         />{' '}
-                        Yes
+                        Ja
                       </label>
                       <label>
                         <input
@@ -196,21 +193,20 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
                           value="false"
                           checked={marketingAndAnalytics === false}
                           onChange={this.handleChange}
-                          aria-label="Disallow marketing and analytics tracking"
+                          aria-label="Afvis marketing og statistisk tracking"
                           required
                         />{' '}
-                        No
+                        Nej
                       </label>
                     </InputCell>
-                    <RowHeading scope="row">Marketing and Analytics</RowHeading>
+                    <RowHeading scope="row">Marketing og statistiske</RowHeading>
                     <td>
                       <p>
-                        To understand user behavior in order to provide you with a more relevant
-                        browsing experience or personalize the content on our site.
-                      </p>
-                      <p className={hideOnMobile}>
-                        For example, we collect information about which pages you visit to help us
-                        present more relevant information.
+                        Vi indsamler oplysninger om, hvordan du interagerer med hjemmesiden,
+                        herunder hvor ofte du besøger siden, og hvilke sider du kigger på. Det gør
+                        vi for at kunne optimere design, brugervenlighed og styrke effektiviteten af
+                        hjemmesiden. Derudover bruger vi oplysningerne til at give dig
+                        personaliseret indhold og udarbejde analyser.
                       </p>
                     </td>
                     <td className={hideOnMobile}>
@@ -227,10 +223,10 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
                           value="true"
                           checked={advertising === true}
                           onChange={this.handleChange}
-                          aria-label="Allow advertising tracking"
+                          aria-label="Tillad annoncerings tracking"
                           required
                         />{' '}
-                        Yes
+                        Ja
                       </label>
                       <label>
                         <input
@@ -239,21 +235,21 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
                           value="false"
                           checked={advertising === false}
                           onChange={this.handleChange}
-                          aria-label="Disallow advertising tracking"
+                          aria-label="Afvis annoncerings tracking"
                           required
                         />{' '}
-                        No
+                        Nej
                       </label>
                     </InputCell>
-                    <RowHeading scope="row">Advertising</RowHeading>
+                    <RowHeading scope="row">Annoncering</RowHeading>
                     <td>
                       <p>
-                        To personalize and measure the effectiveness of advertising on our site and
-                        other websites.
-                      </p>
-                      <p className={hideOnMobile}>
-                        For example, we may serve you a personalized ad based on the pages you visit
-                        on our site.
+                        Vi indsamler oplysninger om dine interesser, herunder hvilke sider og
+                        annoncer du klikker på, hvilke produkter eller ydelser du viser interesse
+                        for, eller køber, på denne og andre hjemmesider. Det gør vi for at kunne
+                        vise dig annoncer, der er relevante for dig og dine interesser. For at kunne
+                        vise dig målrettede annoncer på denne og andre hjemmesider, samarbejder vi
+                        med andre virksomheder, som vi deler oplysninger med.
                       </p>
                     </td>
                     <td className={hideOnMobile}>
@@ -275,10 +271,10 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
                             value="true"
                             checked={preferences[categoryName] === true}
                             onChange={this.handleChange}
-                            aria-label={`Allow "${categoryName}" tracking`}
+                            aria-label={`Tillad "${categoryName}" tracking`}
                             required
                           />{' '}
-                          Yes
+                          Ja
                         </label>
                         <label>
                           <input
@@ -287,10 +283,10 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
                             value="false"
                             checked={preferences[categoryName] === false}
                             onChange={this.handleChange}
-                            aria-label={`Disallow "${categoryName}" tracking`}
+                            aria-label={`Afvis "${categoryName}" tracking`}
                             required
                           />{' '}
-                          No
+                          Nej
                         </label>
                       </InputCell>
                       <RowHeading scope="row">{categoryName}</RowHeading>
@@ -309,13 +305,12 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
 
               <Row>
                 <td>N/A</td>
-                <RowHeading scope="row">Essential</RowHeading>
+                <RowHeading scope="row">Nødvendige</RowHeading>
                 <td>
-                  <p>We use browser cookies that are necessary for the site to work as intended.</p>
                   <p>
-                    For example, we store your website data collection preferences so we can honor
-                    them if you return to our site. You can disable these cookies in your browser
-                    settings but if you do the site may not work as intended.
+                    Nødvendige cookies sikrer, at hjemmesiden fungerer, som den skal. Vi gemmer
+                    eksempelvis dine cookie præferencer som en cookie, så vi kan huske dine
+                    indstillinger til næste gang du besøger vores hjemmeside.
                   </p>
                 </td>
                 <td className={hideOnMobile} />
